@@ -12,6 +12,8 @@ import LogIngForms from './Pages/Forms/LogingForms';
 import RegisterForms from './Pages/Forms/RegisterForms';
 import AuthProvider from './Provider/AuthProvider';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import TaskList from './Pages/Dashboard/TaskList';
+import AddTask from './Pages/Dashboard/AddTask';
 
 
 
@@ -32,12 +34,23 @@ const router = createBrowserRouter([
         path: '/register',
         element: <RegisterForms></RegisterForms>
       },
-      {
-        path:"/dashboard",
-        element: <Dashboard></Dashboard>
-      }
+      
     ]
   },
+  {
+    path:"/dashboard",
+    element: <Dashboard></Dashboard>,
+    children:[
+      {
+        path:'/dashboard',
+        element: <TaskList></TaskList>
+      },
+      {
+        path:'/dashboard/addTask',
+        element: <AddTask></AddTask>
+      }
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

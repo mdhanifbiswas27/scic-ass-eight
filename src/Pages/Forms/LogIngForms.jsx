@@ -1,11 +1,14 @@
-import { useContext } from "react";
+import { useContext, } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link,  useNavigate } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const LogIngForms = () => {
     const {singIn,singInWithGoogle} = useContext(AuthContext);
+   
     const Navigate = useNavigate();
+
+   
     const handleLogin = e=>{
         e.preventDefault();
         const form = e.target;
@@ -20,13 +23,16 @@ const LogIngForms = () => {
         .catch()
     }
 
-    const LogInWithGoogle =()=>{
+    const handleLogInWithGoogle = async () => {
         singInWithGoogle()
-        .then(
+        .then(()=>{
             Navigate('/dashboard')
-        )
-        .cath()
-    }
+        })
+        .catch(()=>{
+            
+        })
+    };
+    
     return (
         <div>
             <div className="flex justify-center  mt-5 mb-5 bg-[#E6E6E6] sm:py-0 md:py-28 lg:py-28 rounded-md">
@@ -47,7 +53,7 @@ const LogIngForms = () => {
                         <p className='font-lg font-medium'>New here? <button className='btn btn-link mb-5'><Link to='/register'>Create Account</Link></button></p>
 
                         <div className='flex  justify-center'>
-                            <div onClick={LogInWithGoogle} className='cursor-pointer border border-blue-500 rounded-full flex items-center py-2 px-4 gap-1'>
+                            <div onClick={handleLogInWithGoogle} className='cursor-pointer border border-blue-500 rounded-full flex items-center py-2 px-4 gap-1'>
                                 <FcGoogle className='text-xl font-semibold text-center'></FcGoogle>
                                 <p   className='font-semibold text-xl text-blue-500 text-center'>SingIn with Google</p>
                             </div>
