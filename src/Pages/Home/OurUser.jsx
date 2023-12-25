@@ -12,7 +12,7 @@ const OurUser = () => {
                             <h2 className="card-title font-bold uppercase">Lawyer </h2>
                             <p>A lawyer is a legal professional who advises and represents clients in legal matters. s, lawyers play a key role in upholding justice and safeguarding the rights of those they serve</p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">Explore</button>
+                            <button className="btn btn-sm text-[white] bg-[#F8B90C] hover:bg-[#F8B90C]">Explore</button>
                             </div>
                         </div>
                     </div>
@@ -23,7 +23,7 @@ const OurUser = () => {
                             <h2 className="card-title font-bold uppercase">architect</h2>
                             <p>An architect is a professional who designs and plans structures, combining aesthetics and functionality. With expertise in spatial design and construction, architects shape environments.</p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">Explore</button>
+                            <button className="btn btn-sm text-[white] bg-[#F8B90C] hover:bg-[#F8B90C]">Explore</button>
                             </div>
                         </div>
                     </div>
@@ -34,7 +34,7 @@ const OurUser = () => {
                             <h2 className="card-title   uppercase">Web-developer</h2>
                             <p>A web developer specializes in crafting websites and web applications, employing various programming languages to ensure optimal functionality and user experience on the internet.</p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">Explore</button>
+                            <button className="btn btn-sm text-[white] bg-[#F8B90C] hover:bg-[#F8B90C]">Explore</button>
                             </div>
                         </div>
                     </div>

@@ -8,7 +8,11 @@ import {
 } from "react-router-dom";
 import Main from './Layout/Main';
 import Home from './Pages/Home/Home';
-// import AuthProvider from './Provider/AuthContext';
+import LogIngForms from './Pages/Forms/LogingForms';
+import RegisterForms from './Pages/Forms/RegisterForms';
+import AuthProvider from './Provider/AuthProvider';
+import Dashboard from './Pages/Dashboard/Dashboard';
+
 
 
 const router = createBrowserRouter([
@@ -17,11 +21,20 @@ const router = createBrowserRouter([
     element: <Main></Main>,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home></Home>
       },
       {
-
+        path: "/logIn",
+        element: <LogIngForms></LogIngForms>
+      },
+      {
+        path: '/register',
+        element: <RegisterForms></RegisterForms>
+      },
+      {
+        path:"/dashboard",
+        element: <Dashboard></Dashboard>
       }
     ]
   },
@@ -29,10 +42,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    
-    {/* <AuthProvider> */}
+    <AuthProvider>
       <RouterProvider router={router} />
-    {/* </AuthProvider> */}
-   
+    </AuthProvider>
+
+
   </React.StrictMode>,
 )
