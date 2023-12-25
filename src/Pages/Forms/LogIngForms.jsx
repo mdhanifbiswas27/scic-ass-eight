@@ -17,19 +17,22 @@ const LogIngForms = () => {
         console.log(email,password);
         // 
         singIn(email, password)
-        .then(
-            Navigate('/dashboard')
-        )
-        .catch()
+        .then(()=>{
+            Navigate('/dashboard');
+            return;
+        } )
+        .catch(error=>{
+            console.log(error);
+        })
     }
 
     const handleLogInWithGoogle = async () => {
-        singInWithGoogle()
+        singInWithGoogle(Navigate('/dashboard'))
         .then(()=>{
             Navigate('/dashboard')
         })
         .catch(()=>{
-            
+
         })
     };
     

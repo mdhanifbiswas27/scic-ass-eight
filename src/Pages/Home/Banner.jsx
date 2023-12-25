@@ -9,7 +9,7 @@ const Banner = () => {
               <div className="lg:col-span-2">
                  <h1 className=" text-[50px] font-semibold">Boost Productivity! <br /> Manage Tasks Seamlessly</h1>
                  <p className="align-middle pr-6 text-justify pt-4">Embark on a journey of enhanced productivity with our task management platform. Streamline your workflow effortlessly, converting ideas into accomplishments. From efficient collaboration to individual task mastery, our platform is designed to simplify, organize, and propel you towards success. Discover the ease of managing tasks with us, where every click propels you closer to your goals</p>
-                 <Link><button className="rounded-md bg-[#F8B90C] my-8 py-3 px-5 text-xl font-medium text-white">Let's Explore</button></Link>
+                 <Link to='/login'><button className="rounded-md bg-[#F8B90C] my-8 py-3 px-5 text-xl font-medium text-white">Let's Explore</button></Link>
               </div>
 
               <div> 
