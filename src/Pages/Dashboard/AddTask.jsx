@@ -21,7 +21,7 @@ const AddTask = () => {
         const description = form.description.value;
         const newTask ={title, date, priority, description,email}
 
-        fetch('http://localhost:5000/scic', {
+        fetch('https://scic-assig-eight-server-7n1icmo3o-md-hanif-biswas-projects.vercel.app/scic', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

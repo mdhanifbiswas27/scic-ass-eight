@@ -22,7 +22,7 @@ const SingleTask = ({ item }) => {
                     'success'
                   )
 
-                fetch(`http://localhost:5000/scic/${_id}`, {
+                fetch(`https://scic-assig-eight-server-7n1icmo3o-md-hanif-biswas-projects.vercel.app/scic/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json()

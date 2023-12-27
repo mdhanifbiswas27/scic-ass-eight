@@ -9,7 +9,7 @@ const TaskList = () => {
    const userEmail = user?.email;
     
    useEffect(()=>{
-      fetch('http://localhost:5000/scic')
+      fetch('https://scic-assig-eight-server-7n1icmo3o-md-hanif-biswas-projects.vercel.app/scic')
       .then(res => res.json())
       .then(data=> {
           const filterData = data.filter(item => item.email === userEmail)
